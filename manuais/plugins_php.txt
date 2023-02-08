@@ -1,0 +1,6 @@
+plugins do PHP
+Etapa 1. Instale a extensão PHP MVC para Visual Studio Code.
+Etapa 2. No Visual Studio Code, abra a pasta do projeto.
+Passo 3. Abra a Paleta de Comandos Ctrl + Shift + p e execute o comando 'Init PHP'.
+Etapa 4. Edite o arquivo base.json de acordo com as informações do seu projeto.
+Etapa 5. Na Paleta de Comandos, execute o comando 'Load JSON'.

@@ -1,0 +1,355 @@
+/*font-size: 10pt;
+		 top   higt	 bottom left  --se for inserido o apenas um valor o mesmo irá servir para os 4 lados
+--padding:10px 20px 30px 40px;
+		 top   higt	 bottom left  --se for inserido o apenas um valor o mesmo irá servir para os 4 lados
+--margin:10px 20px 30px 40px;
+position: absolute/relative: //coloca o conteúdo por cima do conteúdo fixo/para que funcione deve ser passado os parametros top/left/right/bottom
+
+position:sticky;	//deixar um conteúdo/img/logo fixo opós rolar um conteúdo top/bottom
+top:40px;
+bottom:30px
+
+z-index:3;	//mostrar conteúdo um sobre o outro, valor maior será o 1º e assim sucessivamente, para funcionar a propriedade position:relative; deve ser adicionada para ambos
+z-index:2;
+z-index:1;
+
+--top: 30px; distância do top
+--left: 50px; distância da esquerda para direita
+
+--background-attachment:fixed; --deixa imagem fixa na hora de rolagem do conteúdo
+-repeat-x repete a imagem lado direito repeat-y repete imagem para baixo, no-repeat não repete imagem
+			  color, imagem,       repeat,  position:largura/altura--center/higth / tamanho da imagem 
+--background: #AAA url(imagem.png) repeat-x 0px 0px / 100%;
+				 red green blue alfa/transparencia
+--background: rgba(255,255,255,0.5);
+					Satu   Brilho
+background:hsl(240, 100%, 50%)
+
+gradiente
+background:linear-gradient(red, yellow, green);		//baixo/cima
+background:linear-gradient(rgb(255, 0, 0), rgb(255, 255, 0), rgb(0, 200, 0));	//to right/direita ou 90deg/-90deg
+background:linear-gradient(to left, red, yellow, green);	//to right/direita ou 90deg/-90deg
+background:linear-gradient(to left, red, yellow, green);	//to righttop/ indica onde a cor vai iniciar  
+background:radial-gradient-gradient(top left, red, yellow, green);	//gradient em circulo	ou 	20% 40%
+//para navegador ferefox adicionar -moz- antes do radial //para demais navegadores -webkit-
+border: solid --linha continua
+		dotted --linha pontilhada
+		dashed --linha trassejada
+		double --linha dupla
+		groove --linha 3D
+		ridge --linha 3D inverso
+		inset --baixo relevo
+		outset --alto relevo
+		none  --sem borda
+		hidden --oculta
+			   cor style  largura
+border-bottom:#000 solid 5px;
+border-top:#00F solid 5px;
+border-right:#F00 solid 5px;
+border-left:#0F0 solid 5px;
+border-imagem-source:url(imagem/teste.png);	//trabalhar com imagem nas bordas
+border-imagem-slice: 20;
+border-imagem-width:20px;
+border-imagem-outset:5px;
+border-imagem-repeat:round;
+			   LSE	LSD	 LID  LIE 
+border-radius: 20px 30px 40px 50px;
+border-radius:100%; // deixa conteúdo aredondado
+
+#pai{border:solid 5px red; border-radius: 30% 0 30% 0;}	//id filho irá erdar o mesmo parametro do id pai
+#filho{border:inherit; border-radius:inherit;}
+
+text-shadow: 4px 4px black;	//coloca uma sombra no texto
+
+float:left;	//deve ser aplicado para todas as div
+clear:both;	//limpa o ultimo float
+
+word-break:break-all;	//quebra as palavras
+
+
+
+<textarea></textarea>	//cria uma caixa de texto com barra scroll 
+max-width:200px;	//largura máxima
+min-width:115px;	//largura miníma
+max-height:200px;	//altura máxima
+min-height:115px;	//altura miníma
+overflow:scroll;	//aplica uma rolagem para o conteúdo
+
+--caso você deseja usar uma font especifica mas não tem certeza de que outros dispositivo terá a mesma font
+@font-face{
+	font-family: nomeQualquerFont; --criar um nome para fonte
+	src:url(nomeArquivoFont.TTF);	--caminho de onde a font está
+}
+	font-family:nomeQualquerFont;
+	
+#id{text-align:justify;}	//ajusta todo o texto para as palavras não quebrarem para proxima linha	
+#id{text-align-last:justify;}	//ajusta a ultima linha do texto
+#id{text-transform:capitalize;}	//deixa a primeira letra maiuscula
+#id{text-transform:uppercase;}	//todas as letras maiuscula
+#id{text-transform:lowercase;}	//todas as letras minuscula
+#id{text-indent:30px;}	//paragrafo
+#id{text-decoration:underline red wavy 5px;}	//linha baixo/cor/style/tamanho
+#id{letter-spacing:10px;}	//espaçamento entre as letras
+#id{word-break:keep-all;}	//quebra de palavras
+
+#colunas{column-count:4;	//divide o texto em 4 colunas
+column-gap:5px;				//controla o espaçamento das colunas
+			style/tamanho/cor
+column-rule:dashed 5px #666;	//coloca trassejado ao final da coluna	
+column-span:all;	//coloca o texto ocupando todas as colunas	
+column-fill:auto;}	//deivide as colunas preenchendo todo o tamanho do marcado
+
+opacity: 0.5 // deixa a cor transparente
+
+display:flex;		//força o conteúdo a caber dentro do espaço especifico
+flex-direction:row;
+flex-wrap:wrap-reverse;
+ou
+flex:-flow:row wrap-reverse;
+justify-content:space-between;	//separa os valores. a mais valores que pode ser usado
+align-items:center;	//coloca conteúdo ao centro
+			//espaço entre as linhas
+
+display:grid;			
+grid-template-columns:auto auto auto;	//separa em 3 colunas
+grid-template-rows:100px 200px 300px;	// tamanho para cada linha pode ser inserido 5 ou mais valores
+gap:5px;				//controla o espaçamento das colunas e linhas
+grid-column-start:1;	//onde irá iniciar
+grid-column-end:4;		//até onde irá ocupa o espaço final
+ou
+grid-column-start:span 4;	//forma de abreviada das 2 formulas de cima
+ou
+grid-column:1/4;	//forma de abreviada das 2 formulas de cima
+grid-row:1/4;	//forma de abreviada das 2 formulas para coluna
+
+section{grid-template-areas:"item1 item1 item1"
+							 "p p item1";}	//controla o espaço que cada coluna irá ocupar
+#item1{grid-area:item1;}
+p{grid-area:p;}
+	
+			3 tipos de fonte se não encontrar a primeira procura segunda e assim sucessivamente
+font-family:Arial, "Times New Roman", sans-serif;
+font-style: italic/oblique;
+font-weight: bolder/lighter;
+font-variant: small-caps;  --todas as letras em maiusculo
+line-height:2pt;	//espaçamento de uma linha para outra
+
+1-font-style:italic;
+2-font-variant:small-caps;
+3-font-weight:bold;
+4-font-size:16pt;
+5-line-height:24pt;
+6-font-family:courier;
+		1		2		 3	  4    5	6
+font: italic small-caps bold 16pt/24pt courier;
+
+formatacao de liks;
+a:link{} //link não visitado
+a:visited{} //link ja visitado
+a:active{} //link estao sendo visitado
+ou
+a{
+	text-decoration: none; --retira a linha do link
+	display: block/inline; 	--coloca um link a baixo do outro
+}
+a:hover{ //quando o mouse esta sobre link
+	background-color: blue;
+}
+
+table{
+	table-layout:fixed:   --todas as colunas fixa
+	border-collapse: collapse/separate; --tira os espaços de uma das colunas
+	border-spacing: 10px 5px;	--eixo X/Y
+	empty-cells: hide/show;		--oculta celulas vazias
+}
+td,th{
+	vertical-align: bottom;  --texto para baixo
+}
+tr:nth-child(even){
+	background:#ddd;	--adiciona um background para uma linha sim e outra não
+}
+p:nth-child(even){
+	background:#ddd;	--adiciona um background para uma linha sim e outra não tag p
+}
+
+
+html		<span></span>	//ocupa apenas o conteúdo escrito, diferente da div que ocupa a linha inteira
+<a href="http://teste.com" target="_blank"> teste </a> abre uma nova janela mesmo se o dominio for o mesmo
+<a href="http://teste.com" target="_new"> teste </a> não abre uma nova janela se o dominio for o mesmo
+<a href="http://teste.com" target="_self"> teste </a> 
+<a href="http://teste.com" target="_parent"> teste </a> 
+abrir um menu html atraves de outra pagina
+<nav>
+	<object data="nomeAquiv.html"></object>
+</nav>
+
+<input type="color">	//seletor de cores
+
+ul{list-style-image:url(teste.pgn);}	//adiciona uma imagem para a lista
+ul{list-style-type:upper-roman;}	//lista com numeros romano
+ou
+ul{list-style:url(teste.pgn) inside;}	//lista com numeros romano
+
+<ol start="6">
+<ol typt="1" reversed>
+<ol typt="I">
+<ol typt="A">
+
+<li><a href="#T1"></a></li>	//direcionar para a mesma pagina
+<h1 id="T1"></h1>	
+<a href="mail:teste@gmail.com">clique aqui</a>	//irá abrir um aplicativo de email
+<img src="" alt="caso aconteçaum erro" title="Legenda para quando o muose passar por cima da img">
+<source srcset="teste.png" media="(min-width:500-x)">	//se a tela for tamanho 500px mostra a imagem
+trabalhando com audio
+autoplay	//define a reprodução automatica sempre que a pagina for carregada
+loop		//define que o audio será reproduzido novamente ao terminar
+muted		//o audio vai inicia sem som	
+<audio src="testeAudio.mp3" controls></audio>	
+<audio controls autoplay>				
+<source src="testeAudio.mp3" type="audio/ogg">	//se o navegador não for compativel com o 1º audio irár reproduzir o 2º
+<source src="testeAudio.wav" type="audio/wav">
+<source src="testeAudio.mp3" type="audio/mpeg">
+</audio>
+trabalhando com video
+<video src="video.mp4" width="700px" controls></video>
+<video controls width="700px" poster="video.png">	//mostra uma img de inicio
+<source src="video.mp4" type="video/mp4">
+</video>
+
+--exemplo de como manter uma formatação especifica para um seletor
+section{background:red !important;}
+
+--exemplo de como aplicar uma formatação para um marcador filho
+<section>
+	<article>
+		<div id="idDiv">
+			<p>conteúdo</p>
+		</div>
+	</article>
+</section>		
+div > p{background:red;}
+#idDiv > p{background:red;}
+
+--exemplo de como aplicar uma formatação para um marcador que vem após um marcador especificado, irmão adjacente
+<div id="idDiv">
+	<p>conteúdo</p>
+</div>
+div + p{background:red;}
+div ~ p{background:red;} 	//todos os outros marcadores irmão geral
+
+--unidade de medidas
+width:2in; height: 2in;					//polegada
+width:5cm; height: 5cm;					//centímetro
+width:50mm; height: 50mm;				//milímetro
+width:200px; height: 200px;				//pixels
+text-align: center; font-size: 24pt;	//pontos
+text-align: center; font-size: 2pc;		//1 paica vale por 12 pontos pt
+
+*{padding:0px;margin:0px;}	//aplica um padding e uma margin para toda a pagina
+
+link icons wesome
+https://fontawesome.com/v4/icon/bars
+declarar no css @import "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+link cor gradiente
+https://mycolor.space/gradient
+link menu hanburgue
+https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_mobile_navbar
+link atalhos vsc
+https://pt.linkedin.com/pulse/todos-os-atalhos-do-vs-code-mateus-barbosa
+link barra de rolagem
+https://blog.elvessousa.com.br/post/barras-rolagem
+
+para limitar a quantidade de caractere a ser retornada usar o comando abaixo, se for um array passa a posição
+nomedavariavel[0].substr(0, 11);
+ou usar também
+console.log(result[0].slice(-11));
+
+data atual js
+var data = new Date();
+var dia = String(data.getDate()).padStart(2, '0');
+var mes = String(data.getMonth() + 1).padStart(2, '0');
+var ano = data.getFullYear();
+var dataAtual = ano + '-' + mes + '-' + dia;
+
+media query
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {...}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {...}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {...}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {...}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {...}
+
+estilização barra de rolagem
+   .limpartable::-webkit-scrollbar {
+        display: block;
+        width: 1em;
+        overflow: auto;
+        height: 2em;
+        background-color: blue;
+    }
+
+*/
+/*criar class através do js: class incremental
+let c = document.createElement("tr");
+c.classList.add("classteste");
+
+var dellinha = 0;
+c.className = "linha" + dellinha;
+dellinha++;
+*/
+/*convertendo formato de data
+2022-11-09
+minhavariavel.split("-").reverse().join("/");
+09/11/2022
+
+tudo sobre array javascript
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Indexed_Collections
+link para listar dados de um array em uma tabela html
+https://www.devmedia.com.br/javascript-map-mapeando-elementos-de-um-array/40648
+
+rodar site direto no celular, através do live serve visual studio
+digitar no google o ipv4 : porta do live serve/nomedo site
+192.168.1.9:5500/view/home.html
+
+Subir banco online no site 000webhost gratis
+https://www.youtube.com/watch?v=mhjb9J0IgG8&t=610s
+após script rodado no xamp
+1º ir na opção exporta
+2º Clicar em execultar
+
+4º Clicar em novo banco
+5º Digitar nome do banco
+6º Digitar nome do usuario
+7º Digitar senha do banco e clicar em salvar
+8º Após banco ser salvo, clicar em gerenciar e escolher a opção phpmyadmin
+9º Com o phpmysdimn aberto clicar na opção importar
+10º Marcar a opção procurar no seu computador e clicar em escolher arquivo
+11º Clicar em execultar
+
+adicionar imagem ao globo do google
+<link rel="shortcut icon" href="ag.png">
+
+link para carregar ultima atualização do css
+https://pt.stackoverflow.com/questions/84211/como-for%C3%A7ar-carregamento-de-arquivos-js-e-css-a-cada-nova-vers%C3%A3o-publicada
+<script type="text/javascript">
+    function addcss(css){ 
+        var d = new Date();
+        var n = d.getTime();
+        var head = document.getElementsByTagName('head')[0];
+        var s = document.createElement('link');
+        s.setAttribute('rel', 'stylesheet');
+        s.setAttribute('href', css+'?v='+n)
+        head.appendChild(s);
+    }   
+    addcss('./style/homemenu.css');
+</script>
+
+github	https://github.com/wellifabio

@@ -1,0 +1,39 @@
+mysql parou de funcionar: como resolver?
+1º copiar todos os arquivos da "C:\xampp\mysql\backup"
+2ª colar na pasta "C:\xampp\mysql\data"
+-------------------------------------------------------------------
+    const parentList = document.getElementById('iddel');
+    const listChildren = parentList.children;
+    const pid = listChildren[1];
+    console.log(pid);
+https://www.youtube.com/watch?v=7kW6DByQPkw
+-------------------------------------------------------------------
+como adiconar um id para tag html
+let r = document.createElement("section");
+r.id = 'iddel';
+-------------------------------------------------------------------
+    var id = a.parentNode.parentNode.innerText;
+    var result = id.split("", 1);
+    var arraydel = [result]
+-------------------------------------------------------------------
+pegar valor de uma url:
+let idc = new URL(window.location.href).searchParams.get("idc");
+-------------------------------------------------------------------
+deletendo classe
+    var lista = document.getElementsByClassName("linha");
+    for (var i = 0; i < lista.length; i--) {
+        //console.log(lista[1]);
+        lista[i].remove();
+    }
+-------------------------------------------------------------------
+pegar maior valor dentro de um array 
+let array = [1,2,3,4,5];
+let maiorId = Math.max.apply(Math,array);
+let pegaridmaior = Math.max(...array);
+------------------------------------------------------------------
+GITHUB
+Verificar estado dos arquivos/diretórios -> git status
+Adicionar todos os arquivos/diretórios -> git add .
+Comitar informando mensagem -> git commit meuarquivo.txt -m "minha mensagem de commit"
+Subir alterações para repositório remoto -> git push
+Atualizar repositório local de acordo com o repositório remoto -> git pull
