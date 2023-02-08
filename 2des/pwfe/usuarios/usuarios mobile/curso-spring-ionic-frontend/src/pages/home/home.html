@@ -1,0 +1,20 @@
+<ion-content padding>
+  <h3>Tela de Login</h3>
+  <img src="assets/imgs/l.jpg" alt="logo">
+
+  <form>
+    <ion-item>
+      <ion-label stacked>
+        <ion-icon class="icon" name="mail"></ion-icon>
+      </ion-label>
+      <ion-input [(ngModel)]="login" name="login" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>
+        <ion-icon class="icon" name="key"></ion-icon>
+      </ion-label>
+      <ion-input [(ngModel)]="senha" name="senha" type="password"></ion-input>
+    </ion-item>
+    <button class="cor" ion-button block (click)="logar()">Entrar</button>
+  </form>
+</ion-content>
