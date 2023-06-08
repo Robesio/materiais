@@ -248,7 +248,8 @@ text-align: center; font-size: 2pc;		//1 paica vale por 12 pontos pt
 *{padding:0px;margin:0px;}	//aplica um padding e uma margin para toda a pagina
 
 link icons wesome
-https://fontawesome.com/v4/icon/bars
+https://fontawesome.com/v4/examples/#animated
+https://fontawesome.com/v4/icons/
 declarar no css @import "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
 link cor gradiente
 https://mycolor.space/gradient
@@ -353,3 +354,55 @@ https://pt.stackoverflow.com/questions/84211/como-for%C3%A7ar-carregamento-de-ar
 </script>
 
 github	https://github.com/wellifabio
+
+visualizar imagem antes de fazer o upload
+https://satellasoft.com/artigo/html/visualizar-imagem-antes-de-fazer-o-upload-no-html
+
+como verificar se a imagem esta no diretorio javascript
+    photo.src = "../../foto_usuario/" + dado.img;
+    photo.onload = function () {
+       photo.src = "../../foto_usuario/" + dado.img;
+    }
+    photo.onerror = function () {
+        photo.src = "../img/user.jpg";
+        const paragrafo = document.createElement("p");
+        paragrafo.textContent = "Imagem não encontrada no servidor!";
+        p.appendChild(paragrafo);
+    }
+
+RETIRAR VALOR VAZIO DE UM ARRAY
+    let stringConta = new String(c.parentNode.innerText);	//TRANFORMA VALORES EM UMA UNICA STRING
+    let stringContaSplit = stringConta.split("\n");	//SEPARA ONDE TIVER \n
+    let retiraValoresVazio = stringContaSplit.filter(valores => valores != "");	//RETIRA VALOR VAZIO DO ARRAY
+    let retiraValorMoeda = retiraValoresVazio[2].split("R$ ");
+
+Combinações de cores
+https://colorhunt.co/palettes/popular
+Criar logo
+https://logo-maker.freelogodesign.org/pt/
+esconder e visualizar senha
+<button class="emoji" type="button" id="verSenha">😌</button>
+const input = document.querySelector("#senha");
+const button = document.querySelector("#verSenha");
+button.addEventListener('click', verSenha);
+function verSenha() {
+    if (input.type == "password") {
+        input.type = "text";
+        button.textContent = "🙄";
+    } else {
+        input.type = "password";
+        //button.textContent = "😌";
+    }
+}
+Alert personalizado
+https://medium.com/code-prestige/alertas-bonitos-responsivos-e-customizados-com-o-sweetalert2-8db930038137
+Para usar alert personalizado basta adicionar os links no head
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+swal("teste");
+icons do swal
+warning
+info
+sucess
+https://sweetalert.js.org/guides/
+site para treinar programação: beecrowd
